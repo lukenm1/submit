@@ -1,4 +1,4 @@
-/* Apply the VT323 font from Google Fonts */
+/* Apply default monospace font */
 body {
   background-color: #000000;  /* Black background */
   color: white;
@@ -9,14 +9,7 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  font-family: 'VT323', monospace;  /* Apply VT323 font to body */
-}
-
-/* Use VT323 regular class for specific text styling */
-.vt323-regular {
-  font-family: "VT323", monospace;  /* Make sure the font is correctly applied */
-  font-weight: 400;
-  font-style: normal;
+  font-family: monospace;  /* Use default monospaced font */
 }
 
 .container {
@@ -31,7 +24,7 @@ input[type="text"] {
   color: #000000;
   border-radius: 2px;
   width: 200px;
-  font-family: 'VT323', monospace;  /* Ensure the font is applied to the input field */
+  font-family: monospace;  /* Use default monospaced font for the input */
 }
 
 button {
@@ -42,7 +35,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 2px;
-  font-family: 'VT323', monospace;  /* Ensure the font is applied to the button */
+  font-family: monospace;  /* Use default monospaced font for the button */
 }
 
 button:hover {
