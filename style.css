@@ -1,7 +1,7 @@
 /* Apply the VT323 font from Google Fonts */
 body {
   font-family: 'VT323', monospace;  /* Default to VT323 font */
-  background-color: #262626;  /* Black background */
+  background-color: #000000;  /* Black background */
   color: white;
   margin: 0;
   padding: 0;
