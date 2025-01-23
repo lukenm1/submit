@@ -1,6 +1,6 @@
 /* Apply the VT323 font from Google Fonts */
 body {
-  font-family: 'VT323', monospace;  /* Changed to VT323 */
+  font-family: 'VT323';  /* Changed to VT323 */
   background-color: #000000;  /* Black background */
   color: white;
   margin: 0;
