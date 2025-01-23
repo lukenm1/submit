@@ -16,15 +16,6 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-weight: 100;  /* Geologica Thin 100 weight */
-  font-size: 2em;
-}
-
-.section {
-  margin-bottom: 20px;
-}
-
 input[type="text"] {
   padding: 10px;
   font-size: 16px;
