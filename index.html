@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Email Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <label for="readInput">read</label>
+            <div class="input-group">
+                <input type="text" id="readInput" placeholder="enter address">
+                <button onclick="sendEmail('read')">Submit</button>
+            </div>
+        </div>
+        <div class="section">
+            <label for="createInput">create</label>
+            <div class="input-group">
+                <input type="text" id="createInput" placeholder="enter address">
+                <button onclick="sendEmail('create')">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function sendEmail(type) {
+            const inputId = type === 'read' ? "readInput" : "createInput";
+            const address = document.getElementById(inputId).value;
+
+            if (!address) {
+                alert("Please enter an address.");
+                return;
+            }
+
+            try {
+                const response = await fetch("http://localhost:3000/send-email", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ type, address }),
+                });
+
+                const data = await response.json();
+                alert(data.message);
+            } catch (error) {
+                alert("Failed to send email. Please try again later.");
+                console.error("Error:", error);
+            }
+        }
+    </script>
+</body>
+</html>
