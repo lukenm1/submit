@@ -1,6 +1,5 @@
 /* Apply the VT323 font from Google Fonts */
 body {
-  font-family: 'VT323', monospace;  /* Default to VT323 font */
   background-color: #000000;  /* Black background */
   color: white;
   margin: 0;
@@ -29,7 +28,7 @@ input[type="text"] {
   margin-right: 10px;
   background-color: #ffffff;
   color: #000000;
-  border-radius: 5px;
+  border-radius: 2px;
   width: 200px;
 }
 
@@ -40,7 +39,7 @@ button {
   color: #000000;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 button:hover {
